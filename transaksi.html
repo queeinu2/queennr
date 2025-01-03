@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Transaksi - Secret Stash Co.</title>
+   <link rel="stylesheet" href="transaksi.css">
+</head>
+<body>
+
+<header>
+   <div class="logo">
+       <img src="logo.png" alt="Logo Aplikasi Penjualan BlindBox">
+   </div>
+   <nav>
+       <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a href="transaksi.html">Transaksi</a></li>
+       </ul>
+   </nav>
+</header>
+
+<main>
+   <h1>Halaman Transaksi</h1>
+   <p>Silahkan Tulis Pesanan Anda.</p>
+   <form onsubmit="handleSubmit(event)">
+       <label for="item">Nama Barang/Katalog:</label>
+       <input type="text" id="item" name="item" required>
+       
+       <label for="many">Jumlah Barang:</label>
+       <input type="number" id="many" name="many" required>
+
+       <label for="payment-method">Metode Pembayaran:</label>
+       <select id="payment-method" name="payment-method" required>
+            <option value="" disabled selected>Pilih metode pembayaran...</option>
+            <option value="credit-card">Kartu Kredit</option>
+            <option value="debit-card">Kartu Debit</option>
+            <option value="bank-transfer">Transfer Bank</option>
+            <option value="e-wallet">Dompet Digital</option>
+            <option value="cash-on-delivery">Bayar di Tempat</option>
+       </select>
+       
+       <button type="submit">Kirim Transaksi</button>
+   </form>
+
+   <div id="transaction-summary"></div> <!-- Tempat untuk menampilkan detail transaksi -->
+
+</main>
+
+<footer>
+   <p>© 2023 Secret Stash Co. All rights reserved. 241011700515.</p>
+</footer>
+
+<script>
+    function handleSubmit(event) {
+ event.preventDefault(); // Mencegah form dari pengiriman default
+
+ // Mengambil nilai dari input
+ const item = document.getElementById('item').value;
+ const quantity = document.getElementById('many').value;
+ const paymentMethod = document.getElementById('payment-method').value;
+
+ // Menampilkan data transaksi dalam bentuk tabel
+ const transactionDetails = `
+     <h2>Detail Transaksi</h2>
+     <table>
+         <tr>
+             <th>Nama Barang/Katalog</th>
+             <th>Jumlah Barang</th>
+             <th>Metode Pembayaran</th>
+         </tr>
+         <tr>
+             <td>${item}</td>
+             <td>${quantity}</td>
+             <td>${paymentMethod}</td>
+         </tr>
+     </table>
+ `;
+
+ // Menambahkan detail transaksi ke dalam elemen dengan id 'transaction-summary'
+ document.getElementById('transaction-summary').innerHTML = transactionDetails;
+}
+</script>
+
+</body>
+</html>

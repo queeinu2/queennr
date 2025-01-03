@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ecb4d1; /* Warna latar belakang header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Membuat header responsif */
+}
+
+.logo img {
+    width: 100px; /* Ukuran logo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Warna teks menu */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ec7eb6; /* Warna saat hover */
+}
+
+main {
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang konten utama */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 5px #0000001a; /* Bayangan halus */
+    margin: 20px; /* Margin di sekitar konten utama */
+}
+
+h1 {
+    color: #96b9ec; /* Warna teks judul */
+    text-align: center;
+    margin-bottom: 20px; /* Jarak bawah judul */
+    animation: move 2s infinite alternate; /* Menambahkan animasi */
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0); /* Posisi awal */
+    }
+    100% {
+        transform: translateY(-20px); /* Posisi akhir (naik) */
+    }
+}
+
+p {
+    line-height: 1.6; /* Jarak antar baris */
+    margin-bottom: 15px; /* Jarak bawah paragraf */
+    color: #6694da;
+}
+
+ol {
+    margin-left: 20px; /* Margin kiri untuk daftar terurut */
+}
+
+footer {
+    background-color: #ece6b4; /* Warna latar belakang footer */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: white; /* Warna teks footer */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step {
+    background-color: #ffe6f3;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 0 0 10px;
+    color: #d553a3;
+}
+
+/* Media Query untuk perangkat dengan lebar maksimum 768px */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column; /* Mengubah arah flex menjadi kolom */
+        align-items: center; /* Menyelaraskan item header ke tengah */
+    }
+
+    nav ul {
+        flex-direction: column; /* Mengubah menu menjadi kolom */
+        align-items: center; /* Menyelaraskan item menu ke tengah */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Mengatur margin vertikal untuk menu */
+    }
+
+    main {
+        margin: 10px; /* Mengurangi margin di sekitar konten utama */
+    }
+
+    h1 {
+        font-size: 24px; /* Mengurangi ukuran font judul */
+    }
+
+    p {
+        font-size: 14px; /* Mengurangi ukuran font paragraf */
+    }
+
+    .step {
+        padding: 15px; /* Mengurangi padding pada langkah */
+    }
+
+    h2 {
+        font-size: 18px; /* Mengurangi ukuran font judul langkah */
+    }
+}
+
+/* Media Query untuk perangkat dengan lebar maksimum 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    p {
+        font-size: 12px; /* Ukuran font paragraf lebih kecil */
+    }
+
+    h2 {
+        font-size: 16px; /* Mengurangi ukuran font judul langkah */
+    }
+
+    footer {
+        font-size: 12px; /* Ukuran font footer lebih kecil */
+    }
+}

@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ecb4d1; /* Warna latar belakang header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Ukuran logo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Warna teks menu */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ec7eb6; /* Warna saat hover */
+}
+
+.container {
+    width: 1200px; /* Lebar tetap kontainer */
+    margin: 20px auto; /* Mengatur margin otomatis untuk pusat */
+    padding: 20px; /* Padding di dalam kontainer */
+    background-color: #ffffff; /* Warna latar belakang kontainer */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+h1 {
+    color: #96b9ec; /* Warna teks */
+    position: relative; /* Mengatur posisi relatif untuk animasi */
+    animation: move 2s infinite alternate; /* Menambahkan animasi */
+}
+
+.visi-misi {
+    margin: 20px auto; /* Margin untuk pusat */
+    padding: 20px; /* Padding di dalam section */
+    background-color: #eef7ff; /* Warna latar belakang section */
+    border-radius: 8px; /* Sudut membulat */
+}
+
+.visi-misi h2 {
+    color: #96b9ec;
+}
+
+.box {
+    background-color: #ecb4d1; /* Warna latar belakang kotak */
+    border-radius: 8px; /* Sudut membulat */
+    padding: 15px; /* Padding di dalam kotak */
+    margin-bottom: 15px; /* Jarak bawah antar kotak */
+}
+
+.box h3 {
+    color: #d553a3; /* Warna teks untuk judul dalam kotak */
+}
+
+.box p {
+    color: #333; /* Warna teks untuk paragraf dalam kotak */
+}
+
+.box:hover {
+    transform: translateY(-5px); /* Mengangkat kotak sedikit ke atas saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Menambahkan bayangan saat hover */
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(0); /* Posisi awal */
+    }
+    100% {
+        transform: translateY(-10px); /* Posisi akhir (naik) */
+    }
+}
+
+h3 {
+    color: #96b9ec;
+}
+
+footer {
+    background-color: #ece6b4; /* Warna latar belakang footer */
+    text-align: center;
+    padding: 10px;
+    color: white; /* Warna teks footer */
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Mengubah header menjadi kolom */
+        align-items: center; /* Menyelaraskan item header ke tengah */
+    }
+
+    nav ul {
+        flex-direction: column; /* Mengubah menu menjadi kolom */
+        align-items: center; /* Menyelaraskan item menu ke tengah */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Jarak antar item menu */
+    }
+
+    .container {
+        width: 100%; /* Mengatur lebar kontainer menjadi 100% untuk layar kecil */
+        margin: 10px; /* Mengurangi margin di sekitar kontainer */
+        padding: 15px; /* Mengurangi padding di dalam kontainer */
+    }
+
+    h1 {
+        font-size: 24px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    h3 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk subjudul */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px; /* Ukuran logo lebih kecil untuk layar ponsel */
+    }
+
+    h1 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    h3 {
+        font-size: 18px; /* Ukuran font lebih kecil untuk subjudul */
+    }
+
+    footer {
+        font-size: 12px; /* Ukuran font footer lebih kecil */
+    }
+}

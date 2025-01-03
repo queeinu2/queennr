@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Secret Stash Co.</title>
+    <link rel="stylesheet" href="beranda.css">
+    <style>
+        /* CSS untuk banner dan teks */
+        .banner-container {
+            position: relative; /* Mengatur posisi relatif untuk kontainer */
+            text-align: center; /* Mengatur teks agar berada di tengah */
+        }
+
+        .banner-container img {
+            width: 100%; /* Mengatur gambar agar responsif */
+            height: auto; /* Mempertahankan rasio aspek */
+        }
+
+        h1 {
+            position: absolute; /* Mengatur posisi absolut untuk teks */
+            top: 50%; /* Menempatkan teks di tengah vertikal */
+            left: 50%; /* Menempatkan teks di tengah horizontal */
+            transform: translate(-50%, -50%); /* Menggeser teks agar tepat di tengah */
+            color: #96b9ec; /* Warna teks */
+            animation: move 2s infinite alternate; /* Menambahkan animasi */
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(-50%, -50%); /* Posisi awal */
+            }
+            100% {
+                transform: translate(-50%, -60%); /* Posisi akhir (naik) */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Aplikasi Penjualan BlindBox">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="banner-container">
+        <img src="banner.jpeg" alt="Banner">
+        <h1>Selamat Datang di Secret Stash Co.</h1>
+    </div>
+    <h4>Selamat datang di Secret Stash Co, tempat kejutan menjadi gaya hidup! Di sini, 
+        setiap blindbox adalah petualangan baru—kamu tak pernah tahu apa yang akan kamu dapatkan, 
+        tapi itulah bagian terbaiknya. Apakah isinya akan bikin kamu tertawa, terkejut, atau bahkan 
+        teriak kegirangan? Kami menjual lebih dari sekadar barang; kami menjual momen penuh sensasi
+        yang tak terlupakan. Jadi, siapkan dirimu untuk membuka rahasia di setiap kotak dan biarkan 
+        keseruan dimulai!</h4>
+    <p>Gunakan aplikasi ini untuk melakukan transaksi penjualan barang dengan mudah.</p>
+    <p>Berikut adalah langkah-langkah untuk menggunakan aplikasi:</p>
+    <div class="container">
+        <div class="step" id="step1">
+            <h2>Langkah 1</h2>
+            <p>Buka aplikasi di perangkat Anda.</p>
+        </div>
+        <div class="step" id="step2">
+            <h2>Langkah 2</h2>
+            <p>Masuk dengan akun Anda.</p>
+        </div>
+        <div class="step" id="step3">
+            <h2>Langkah 3</h2>
+            <p>Pilih fitur yang ingin Anda gunakan.</p>
+        </div>
+        <div class="step" id="step4">
+            <h2>Langkah 4</h2>
+            <p>Ikuti instruksi yang diberikan.</p>
+        </div>
+    </div>
+    <p><u>Silakan pilih menu di atas untuk mulai menggunakan aplikasi.</u></p>
+</main>
+
+<footer>
+    <p>&copy; 2023 Secret Stash Co. All rights reserved. 241011700515.</p>
+</footer>
+
+</body>
+</html>

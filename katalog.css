@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center; /* Mengatur teks di tengah */
+}
+
+.product-list {
+    display: flex;
+    justify-content: center; /* Mengatur produk agar berada di tengah */
+    flex-wrap: wrap; /* Membuat produk membungkus ke baris berikutnya */
+    gap: 20px; /* Jarak antar produk */
+    padding: 20px;
+}
+
+.product-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px; /* Lebar tetap untuk setiap produk */
+    transition: transform 0.3s; /* Transisi halus untuk efek hover */
+}
+
+.product-item img {
+    width: 80%; /* Mengatur lebar gambar menjadi 80% dari ukuran aslinya (20% lebih kecil) */
+    height: auto; /* Tinggi otomatis untuk menjaga rasio aspek */
+    display: block; /* Mengatur gambar sebagai blok */
+    margin: 0 auto; /* Memusatkan gambar */
+    transition: transform 0.3s; /* Transisi halus untuk efek hover */
+}
+
+.product-item:hover img {
+    transform: scale(1.1); /* Membesarkan gambar saat di-hover */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Membesarkan produk saat di-hover */
+}
+
+button {
+    background-color: #67baf6; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border default */
+    padding: 10px 15px; /* Padding tombol */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol */
+    transition: background-color 0.3s; /* Transisi halus untuk warna latar belakang */
+}
+
+button:hover {
+    background-color: #ec7eb6; /* Warna latar belakang tombol saat hover */
+}
+
+header {
+    background-color: #ecb4d1; /* Warna latar belakang header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Ukuran logo */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Warna teks menu */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ec7eb6; /* Warna saat hover */
+}
+
+main {
+    padding: 20px;
+    background-color: #ffffff; /* Warna latar belakang konten utama */
+    border-radius: 8px; /* Sudut membulat */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    margin: 20px; /* Margin di sekitar konten utama */
+}
+
+h1 {
+    color: #ec7eb6; /* Warna teks judul */
+    text-align: center;
+    margin-bottom: 20px; /* Jarak bawah judul */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Membuat produk dalam beberapa baris */
+    justify-content: space-around; /* Menyebar produk secara merata */
+}
+
+.product-item {
+    background-color: #f9f9f9; /* Warna latar belakang item produk */
+    border: 1px solid #ddd
+}
+
+footer {
+    background-color: #ece6b4; /* Warna latar belakang footer */
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color: white; /* Warna teks footer */
+}
+
+/* Media Queries untuk responsivitas */
+@media (max-width: 768px) {
+    .product-item {
+        width: 150px; /* Lebar produk lebih kecil untuk layar tablet */
+    }
+
+    header {
+        flex-direction: column; /* Mengubah header menjadi kolom */
+        align-items: center; /* Menyelaraskan item header ke tengah */
+    }
+
+    nav ul {
+ flex-direction: column; /* Mengubah menu menjadi kolom */
+        align-items: center; /* Menyelaraskan item menu ke tengah */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Jarak antar item menu */
+    }
+
+    h1 {
+        font-size: 24px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    main {
+        margin: 10px; /* Mengurangi margin di sekitar konten utama */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        width: 100%; /* Lebar produk 100% untuk layar ponsel */
+    }
+
+    h1 {
+        font-size: 20px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    button {
+        padding: 8px 12px; /* Mengurangi padding tombol */
+    }
+
+    footer {
+        font-size: 12px; /* Ukuran font footer lebih kecil */
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Secret Stash Co.</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Aplikasi Penjualan BlindBox">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="katalog.html">Katalog</a></li>
+            <li><a href="transaksi.html">Transaksi</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Login ke Akun Anda</h1>
+    <form id="loginForm">
+        <label for="username">Email:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Kata Sandi:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+
+    <div id="loginInfo" style="display: none;">
+        <h2>Data Login</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Kata Sandi</th>
+                </tr>
+            </thead>
+            <tbody id="loginData">
+                <!-- Data login akan ditambahkan di sini -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+    <p>© 2023 Secret Stash Co. All rights reserved. 241011700515.</p>
+</footer>
+
+<script>
+    // Menangani pengiriman form
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah pengiriman form default
+
+        // Mengambil data dari input
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Menampilkan data login di tabel
+        const loginData = document.getElementById('loginData');
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `<td>${username}</td><td>${password}</td>`;
+        loginData.appendChild(newRow);
+        
+        // Menampilkan informasi login
+        document.getElementById('loginInfo').style.display = 'block';
+
+        // Reset form
+        document.getElementById('loginForm').reset();
+    });
+</script>
+
+</body>
+</html>
